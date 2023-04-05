@@ -1,0 +1,26 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+@await Component.InvokeAsync("_HeadPartial")
+
+<body>
+    @await Component.InvokeAsync("_NavHeaderPartial")
+
+    @await Component.InvokeAsync("_HeaderPartial")
+
+    @await Component.InvokeAsync("_NkSidebarPartial")
+    <div class="content-body">
+        @await Component.InvokeAsync("_ContentBodyPartial")
+        <div class="container-fluid">
+            @RenderBody()
+        </div>
+    </div>
+
+    @await Component.InvokeAsync("_ScriptsPartial")
+
+</body>
+</html>
