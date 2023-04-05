@@ -1,5 +1,4 @@
-﻿using HotelProject.DataAccessLayer.Abstract;
-using HotelProject.EntityLayer.Concrete;
+﻿using HotelProject.EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HotelProject.BusinessLayer.Abstract
 {
-    public interface IServiceService : IGenericDal<Service>
+    public interface IServiceService : IGenericService<Service>
     {
     }
 }

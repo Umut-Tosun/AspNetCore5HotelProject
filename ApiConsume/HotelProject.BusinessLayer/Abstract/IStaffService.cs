@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HotelProject.BusinessLayer.Abstract
 {
-    public interface IStaffService : IGenericDal<Staff>
+    public interface IStaffService : IGenericService<Staff>
     {
     }
 }

@@ -17,29 +17,29 @@ namespace HotelProject.DataAccessLayer.Repositories
             _context = context;
         }
 
-        public void Delete(T entity)
+        public void TDelete(T entity)
         {
             _context.Remove(entity);
             _context.SaveChanges();
         }
 
-        public T GetById(int id)
+        public T TGetById(int id)
         {
             return _context.Set<T>().Find(id);
         }
 
-        public List<T> GetList()
+        public List<T> TGetList()
         {
             return _context.Set<T>().ToList();
         }
 
-        public void Insert(T entity)
+        public void TInsert(T entity)
         {
             _context.Add(entity);
             _context.SaveChanges();
         }
 
-        public void Update(T entity)
+        public void TUpdate(T entity)
         {
             _context.Update(entity);
             _context.SaveChanges();

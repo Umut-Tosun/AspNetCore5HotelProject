@@ -19,27 +19,27 @@ namespace HotelProject.BusinessLayer.Concrete
             _staffDal = staffDal;
         }
 
-        public void TDelete(Staff entity)
+        public void Delete(Staff entity)
         {
             _staffDal.TDelete(entity);
         }
 
-        public Staff TGetById(int id)
+        public Staff GetById(int id)
         {
             return _staffDal.TGetById(id);
         }
 
-        public List<Staff> TGetList()
+        public List<Staff> GetList()
         {
            return _staffDal.TGetList();
         }
 
-        public void TInsert(Staff entity)
+        public void Insert(Staff entity)
         {
             _staffDal.TInsert(entity);
         }
 
-        public void TUpdate(Staff entity)
+        public void Update(Staff entity)
         {
             _staffDal.TUpdate(entity);
         }
