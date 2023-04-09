@@ -1,0 +1,71 @@
+﻿@model HotelProject.WebUI.Areas.Admin.Models.Staff.StaffViewModel
+@{
+    ViewData["Title"] = "AddStaff";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <form  method="post" id="step-form-horizontal" class="step-form-horizontal" enctype="multipart/form-data">
+            <div>
+                <h4>Çalışan İsim</h4>
+                <section>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <input type="text" name="Name" class="form-control" placeholder="Ad" required>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <input type="text" name="Surname" class="form-control" placeholder="Soyad" required>
+                            </div>
+                        </div>
+            
+                    </div>
+                </section>
+                <h4>Başlık</h4>
+                <section>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <input type="text" name="Title" class="form-control" placeholder="Pozisyon" required>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <h4>Çalışan Son Bilgiler</h4>
+                <section>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                 
+                                <img src="https://cdn-icons-png.flaticon.com/512/219/219988.png" id="output"class="img-fluid" name="imageUrl" style="width:60%" alt="Maxwell Admin">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <label for="website">Görsel</label>
+                            <input type="file" class="form-control" id="FileUrl" name="FileUrl" accept="image/*" onchange="document.getElementById('output').src = window.URL.createObjectURL(this.files[0])">
+                        </div>
+                        <div class="col-6">
+                            <label for="website">Linkedin Url</label>
+                            <input type="text" class="form-control" id="FileUrl" name="LinkedinUrl" placeholder="Linkedin Adresi" >
+                        </div>
+                    </div>
+                </section>
+                <h4>Onay</h4>
+                <section>
+                    <div class="row h-100">
+                        <div class="col-12 h-100 d-flex flex-column justify-content-center align-items-center">
+                            <h2>Formu başarıyla doldurdun!</h2>
+                            <p>Çalışan ekle butonuna basarak kayıt işlemini gerçekleştirebilirsin.</p>
+                            <button type="submit" class="btn btn-outline-success">Çalışan Ekle</button>
+                            
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </form>
+    </div>
+</div>
+

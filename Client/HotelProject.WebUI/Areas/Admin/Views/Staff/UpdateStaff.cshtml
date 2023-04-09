@@ -1,0 +1,63 @@
+﻿@model HotelProject.WebUI.Areas.Admin.Models.Staff.StaffViewModel
+@{
+    ViewData["Title"] = "UpdateStaff";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<row>
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Personel Bilgiler</h4>
+                <div class="basic-form">
+                    <form method="post" enctype="multipart/form-data">
+                        <input hidden name="id" value="@Model.id" />
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">İsim</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="Name" value="@Model.name">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label" >Soyisim</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="Surname" value="@Model.surname">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Başlık</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="Title" value="@Model.title">
+                            </div>
+                        </div>
+                       
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Görseli Güncelle</label>
+                            <div class="col-sm-10">
+                                <input type="file" class="form-control"  id="FileUrl" name="FileUrl" accept="image/*" onchange="document.getElementById('output').src = window.URL.createObjectURL(this.files[0])">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Görsel</label>
+                            <div class="col-sm-10">
+                                <img src="@Model.imageUrl" class="img-fluid w-25" id="output">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Linkedin Adresi</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="LinkedinUrl" value="@Model.linkedinUrl">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-10">
+                                <button type="submit" class="btn btn-success">Bilgileri Güncelle</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</row>
+
