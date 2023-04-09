@@ -1,0 +1,42 @@
+﻿@using HotelProject.WebUI.Areas.Admin.Models.Testimonial
+@model List<TestimonialViewModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<row>
+    <div class="col-12">
+        <h1>Referanslar Tablosu</h1>
+        <table class="table table-border">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Tam İsim</th>
+                    <th>Konu</th>
+                    <th>Sil</th>
+                    <th>Güncelle</th>
+                    <th>Detaylar</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.id</td>
+                        <td>@item.FullName</td>
+                        <td>@item.Subject</td>
+                        <td>@Html.ActionLink("Sil", "DeleteTestimonial", "Testimonial", new { area = "Admin", id = item.id }, new { @class = "btn mb-1 btn-rounded btn btn-outline-danger", onclick = "return confirm('Silme işlemini onaylıyor musunuz?')" })</td>
+
+
+                        <td><a class="btn mb-1 btn-rounded btn btn-outline-primary" href="/Admin/Testimonial/UpdateTestimonial/@item.id">Güncelle</a></td>
+                        <td><a class="btn mb-1 btn-rounded btn btn-outline-warning" href="/Admin/Testimonial/UpdateTestimonial/@item.id">Detay Görüntüle</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <a href="/Admin/Testimonial/AddTestimonial" class="btn mb-1 btn-rounded btn-outline-success">Yeni Referans Girişi</a>
+    </div>
+
+</row>
+
