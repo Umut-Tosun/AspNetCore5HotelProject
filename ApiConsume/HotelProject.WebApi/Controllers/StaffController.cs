@@ -7,11 +7,11 @@ namespace HotelProject.WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class StafController : ControllerBase
+    public class StaffController : ControllerBase
     {
         private readonly IStaffService _staffService;
 
-        public StafController(IStaffService staffService)
+        public StaffController(IStaffService staffService)
         {
             _staffService = staffService;
         }
