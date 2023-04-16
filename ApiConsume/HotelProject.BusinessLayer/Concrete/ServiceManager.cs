@@ -25,7 +25,7 @@ namespace HotelProject.BusinessLayer.Concrete
 
         public Service GetById(int id)
         {
-            throw new NotImplementedException();
+          return _serviceDal.TGetById(id);
         }
 
         public List<Service> GetList()
