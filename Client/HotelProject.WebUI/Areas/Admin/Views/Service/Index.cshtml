@@ -1,0 +1,40 @@
+﻿@using HotelProject.WebUI.Dtos.ServiceDto
+@model List<ResultServiceDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<row>
+    <div class="col-12">
+        <h1>Hizmet Tablosu</h1>
+        <table class="table table-border">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Başlık</th>
+                    <th>Sil</th>
+                    <th>Güncelle</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.id</td>
+                        <td>@item.Title</td>
+                        <td>@Html.ActionLink("Sil", "DeleteService", "Service", new { area = "Admin", id = item.id }, new { @class = "btn mb-1 btn-rounded btn btn-outline-danger", onclick = "return confirm('Silme işlemini onaylıyor musunuz?')" })</td>
+
+
+                        <td><a class="btn mb-1 btn-rounded btn btn-outline-primary" href="/Admin/Service/UpdateService/@item.id">Güncelle</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <a href="/Admin/Service/AddService" class="btn mb-1 btn-rounded btn-outline-success">Yeni Hizmet Ekle</a>
+    </div>
+
+</row>
+
+
+
+
