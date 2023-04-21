@@ -1,0 +1,24 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+@await Component.InvokeAsync("_HeadPartialHotelTheme")
+
+<body>
+
+        @await Component.InvokeAsync("_HeaderPartialHotelTheme")
+
+        @RenderBody()
+
+        @await Component.InvokeAsync("_FooterPartialHotelTheme")
+
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    @await Component.InvokeAsync("_ScriptsPartialHotelTheme")
+
+</body>
+
+</html>
