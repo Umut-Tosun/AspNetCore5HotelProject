@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Carousel Start -->
+@await Component.InvokeAsync("_SliderPartialHotelTheme")
+<!-- Carousel End -->
+<!-- Booking Start -->
+@await Component.InvokeAsync("_ReservationPartialHotelTheme")
+<!-- Booking End -->
+<!-- About Start -->
+@await Component.InvokeAsync("_AboutUsPartialHotelTheme")
+<!-- About End -->
+<!-- Room Start -->
+@await Component.InvokeAsync("_OurRoomPartialHotelTheme")
+<!-- Room End -->
+<!-- Video Start -->
+@await Component.InvokeAsync("_TrailerPartialHotelTheme")
+<!-- Video Start -->
+<!-- Service Start -->
+@await Component.InvokeAsync("_OurServicePartialHotelTheme")
+<!-- Service End -->
+<!-- Testimonial Start -->
+@await Component.InvokeAsync("_OurTestimonialPartialHotelTheme")
+<!-- Testimonial End -->
+<!-- Team Start -->
+@await Component.InvokeAsync("_TeamPartialHotelTheme")
+<!-- Team End -->
+<!-- Newsletter Start -->
+@await Html.PartialAsync("_NewsLetterPartialHotelTheme.cshtml")
